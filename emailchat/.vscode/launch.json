@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "ClientMain",
+            "request": "launch",
+            "mainClass": "com.chatapp.client.ClientMain",
+            "projectName": "emailchat",
+            "vmArgs": "--module-path \"C:/Users/PC/Downloads/openjfx-24_windows-x64_bin-sdk (1)/javafx-sdk-24/lib/\" --add-modules javafx.controls,javafx.fxml --enable-native-access=javafx.graphics"
+        },
+        {
+            "type": "java",
+            "name": "ServerMain",
+            "request": "launch",
+            "mainClass": "com.chatapp.server.ServerMain",
+            "projectName": "emailchat",
+            "vmArgs": "--module-path \"C:/Users/PC/Downloads/openjfx-24_windows-x64_bin-sdk (1)/javafx-sdk-24/lib/\" --add-modules javafx.controls,javafx.fxml --enable-native-access=javafx.graphics"
+        }
+    ]
+}

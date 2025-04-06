@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chatapp.client.gui.LoginScreen">
+   <children>
+      <VBox alignment="CENTER" layoutX="50.0" layoutY="30.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Chat Application" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TabPane prefHeight="400.0" prefWidth="400.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <!-- Onglet Login -->
+                <Tab text="Login">
+                  <content>
+                    <AnchorPane>
+                           <children>
+                              <VBox alignment="CENTER" spacing="15.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+                                 <children>
+                                    <Label text="Se connecter">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="emailField" promptText="Email" />
+                                    <PasswordField fx:id="passwordField" promptText="Mot de passe" />
+                                    <Button fx:id="loginButton" onAction="#handleLogin" text="Connexion" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+                                    <Label fx:id="loginErrorLabel" textFill="RED" />
+                                    <Label text="Adresse du serveur :"/>
+                                    <TextField fx:id="serverAddressField" promptText="localhost" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <!-- Onglet Register -->
+                <Tab text="Register">
+                  <content>
+                    <AnchorPane>
+                           <children>
+                              <VBox alignment="CENTER" spacing="15.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+                                 <children>
+                                    <Label text="Créer un compte">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="regEmailField" promptText="Email" />
+                                    <TextField fx:id="regUsernameField" promptText="Nom d'utilisateur" />
+                                    <PasswordField fx:id="regPasswordField" promptText="Mot de passe" />
+                                    <PasswordField fx:id="regConfirmPasswordField" promptText="Confirmer le mot de passe" />
+                                    <Button fx:id="registerButton" onAction="#handleRegister" text="Inscription" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+                                    <Label fx:id="registerErrorLabel" textFill="RED" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
